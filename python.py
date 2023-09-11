@@ -21,7 +21,7 @@ def createUC(UC,msg):
     function("git checkout -b"+UC)
     function("git add .")
     function( "git commit -m \" [Narenthra Kishore] Add : "+msg+"\"")
-    function("git push "+UC)
+    function("git push origin"+UC)
     function("git checkout main")
     function("git merge "+UC)
     function("git push origin main ")
