@@ -5,7 +5,7 @@ class Contact {
         this.validateLength(address, 'Address', 4);
         this.validateLength(city, 'City', 4);
         this.validateLength(state, 'State', 4);
-        this.validatePattern(zip, 'Zip Code', /^\d{5}$/);
+        this.validatePattern(zip, 'Zip Code', /^\d{6}$/);
         this.validatePattern(phoneNumber, 'Phone Number', /^\d{10}$/);
         this.validatePattern(email, 'Email', /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/);
 
