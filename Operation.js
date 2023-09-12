@@ -6,7 +6,7 @@ const addressBook = new AddressBook();
 //create contact
 const contact1 = new Contact("John", "Doenk", "123 Main St", "New York", "america", "654321", "0987654321", "john@example.com");
 const contact2 = new Contact("Jane", "Smith", "456 Elm St", "Los Angeles", "califonia", "543216", "1234567890", "jane@example.com");
-const contact3 = new Contact("Naren", "Rsnk", "18/268 b ", "Avinashi", "kalakurichi", "123456", "6789054321", "Naren@example.com");
+const contact3 = new Contact("Naren", "Rsnk", "18/268 b ", "Avinashi", "kalakurichi", "123456", "6789054321", "naren@example.com");
 
 //add to list
 addressBook.addContact(contact1);
@@ -36,5 +36,8 @@ if (foundContact) {
 else {
     console.log("Contact not found.");
 }
+addressBook.displayContacts();
+//Delete the contact
+addressBook.deleteContact("Naren");
 addressBook.displayContacts();
 

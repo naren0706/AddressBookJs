@@ -18,10 +18,10 @@ class AddressBook {
             console.log(`Zip Code: ${contact.zip}`);
             console.log(`Phone Number: ${contact.phoneNumber}`);
             console.log(`Email: ${contact.email}`);
-            console.log("-------------"); 
+            console.log("-------------");
         });
     }
-    
+
     findContactByName(firstName, lastName) {
         const foundContactIndex = this.contacts.findIndex(contact => {
             return contact.firstName === firstName && contact.lastName === lastName;
@@ -41,10 +41,22 @@ class AddressBook {
 
         if (foundContactIndex !== -1) {
             this.contacts[foundContactIndex] = { ...this.contacts[foundContactIndex], ...updatedContactInfo };
-            return true; 
+            return true;
         } else {
-            return false; 
+            return false;
         }
+    }
+
+    deleteContact(name) {
+        let a = 0;
+        this.contacts.forEach(element => {
+            if (name === element.firstName) {
+                console.log("--------->Contact Deleted Successfully");
+                this.contacts.splice(a, 1);
+            }
+            a++;
+        }
+        );
     }
 }
 
