@@ -41,3 +41,4 @@ addressBook.displayContacts();
 addressBook.deleteContact("Naren");
 addressBook.displayContacts();
 
+console.log(addressBook.ContactCount());
