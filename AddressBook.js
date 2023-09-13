@@ -93,19 +93,33 @@ class AddressBook {
 
         return foundContact;
     }
-    findContactByStateNCity(state,city) {
+    findContactByStateNCity(state, city) {
         const foundContact = this.contacts.filter(contact => {
             return contact.state === state && contact.city === city;
         });
 
         return foundContact;
     }
-    CountContactInStateNCity(state,city) {
+    CountContactInStateNCity(state, city) {
         const foundContact = this.contacts.filter(contact => {
             return contact.state === state && contact.city === city;
         });
 
         return foundContact.length;
+    }
+    sortUsingFirstName() {
+        this.contacts.sort((a, b) => {
+            const name1 = a.firstName.toLowerCase();
+            const name2 = b.firstName.toLowerCase();
+
+            if (name1 < name2)
+                return -1;
+            if (name1 > name2)
+                return 1;
+            else
+                return 0;
+
+        })
     }
 }
 
