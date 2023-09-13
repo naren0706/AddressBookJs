@@ -121,6 +121,48 @@ class AddressBook {
 
         })
     }
+    sortUsingCity() {
+        this.contacts.sort((a, b) => {
+            const name1 = a.city.toLowerCase();
+            const name2 = b.city.toLowerCase();
+
+            if (name1 < name2)
+                return -1;
+            if (name1 > name2)
+                return 1;
+            else
+                return 0;
+
+        })
+    }
+    sortUsingState() {
+        this.contacts.sort((a, b) => {
+            const name1 = a.state.toLowerCase();
+            const name2 = b.state.toLowerCase();
+
+            if (name1 < name2)
+                return -1;
+            if (name1 > name2)
+                return 1;
+            else
+                return 0;
+
+        })
+    }
+    sortUsingZip() {
+        this.contacts.sort((a, b) => {
+            const name1 = a.zip;
+            const name2 = b.zip;
+
+            if (name1 < name2)
+                return -1;
+            if (name1 > name2)
+                return 1;
+            else
+                return 0;
+
+        })
+    }
 }
 
 module.exports = AddressBook;

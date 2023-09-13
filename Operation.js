@@ -46,7 +46,13 @@ console.log(addressBook.ContactCount());
 
 console.log(addressBook.findContactByCity("New York"));
 console.log(addressBook.findContactByState("america"));
-console.log(addressBook.findContactByStateNCity("america","New York"));
-console.log(addressBook.CountContactInStateNCity("america","New York"));
+console.log(addressBook.findContactByStateNCity("america", "New York"));
+console.log(addressBook.CountContactInStateNCity("america", "New York"));
 addressBook.sortUsingFirstName();
-addressBook.displayContacts()
+addressBook.displayContacts();
+addressBook.sortUsingCity();
+addressBook.displayContacts();
+addressBook.sortUsingState();
+addressBook.displayContacts();
+addressBook.sortUsingZip();
+addressBook.displayContacts();
