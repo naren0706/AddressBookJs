@@ -44,4 +44,5 @@ addressBook.displayContacts();
 
 console.log(addressBook.ContactCount());
 
-console.log(addressBook.toFindDuplicates());
+console.log(addressBook.findContactByCity("New York"));
+console.log(addressBook.findContactByState("america"));

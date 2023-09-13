@@ -5,9 +5,8 @@ class AddressBook {
     }
 
     addContact(contact) {
-        if(this.toFindDuplicates()===true)
-            {this.contacts.push(contact);}
-        else{
+        if (this.toFindDuplicates() === true) { this.contacts.push(contact); }
+        else {
             console.log("contact already present")
         }
     }
@@ -69,7 +68,7 @@ class AddressBook {
 
     toFindDuplicates() {
         let length = this.contacts.length;
-        let newArr=[],index=0;
+        let newArr = [], index = 0;
         for (let i = 0; i < length - 1; i++) {
             for (let j = i + 1; j < length; j++) {
                 if (this.contacts[i].firstName === this.contacts[j].firstName) {
@@ -78,7 +77,21 @@ class AddressBook {
                 }
             }
         }
-        return newArr[0]===undefined;
+        return newArr[0] === undefined;
+    }
+    findContactByCity(city) {
+        const foundContact = this.contacts.filter(contact => {
+            return contact.city === city;
+        });
+
+        return foundContact;
+    }
+    findContactByState(state) {
+        const foundContact = this.contacts.filter(contact => {
+            return contact.state === state;
+        });
+
+        return foundContact;
     }
 }
 
