@@ -32,4 +32,3 @@ UCname=input("Enter the UseCaseName:")
 commitmessage=input("Enter the commit message :")
 createUC(UCname,commitmessage)
 
-
