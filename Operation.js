@@ -12,6 +12,7 @@ const contact3 = new Contact("Naren", "Rsnk", "18/268 b ", "Avinashi", "kalakuri
 addressBook.addContact(contact1);
 addressBook.addContact(contact2);
 addressBook.addContact(contact3);
+addressBook.addContact(contact2);
 //display contact
 addressBook.displayContacts();
 //search contact
@@ -42,3 +43,5 @@ addressBook.deleteContact("Naren");
 addressBook.displayContacts();
 
 console.log(addressBook.ContactCount());
+
+console.log(addressBook.toFindDuplicates());
